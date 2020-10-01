@@ -1,0 +1,155 @@
+
+body {
+	font: 14px 'Roboto', sans-serif;
+	font-weight: 400;
+}
+.container {
+	max-width: 1200px;
+  	margin: 0 auto;
+  	padding: 0 30px;
+}
+
+.bg-container {
+	height: 100vh;
+	background: linear-gradient(-45deg, #ee7752 0%, #e73c7e 30%, #23a6d5 70%, #2fccc2 100%);
+	/* background-size: 100% 100%; */
+	/* background-position:  center; */
+}
+/* header */
+.page-header {
+	height: 30px;
+	text-align: right;
+	background: rgba(0, 0, 0, 0.2);
+}
+.page-header a {
+	text-decoration: none;
+	padding: 0px 0px 0px 50px ;
+	color: black;
+	font: 15px 'Roboto Mono', sans-serif;
+	line-height: 30px;
+}
+
+/* welcome page */
+.welcome-page {
+	height: 95vh;
+	margin: 0px;
+}
+.welcome-content {
+	padding-top: 300px;
+	color: aliceblue;
+	text-align: center;
+}
+.welcome-header {
+	font: 60px 'Montserrat', sans-serif;
+	font-weight: 600;
+	margin: auto;
+}
+.welcome-sub-heading {
+	font-size: 30px;
+	font-weight: 400;
+}
+
+/* about page */
+.about-page {
+	/* height: 100vh; */
+}
+.about-header {
+	font: 40px 'Montserrat', sans-serif;
+	padding-left: 30px;
+	font-weight: 600;
+	margin: 0px;
+	padding-top: 20px;
+}
+.about-content {
+	/* display: inline; */
+	font: 20px 'Roboto', sans-serif;
+	width: 700px;
+}
+
+.my_photo {
+	width: 300px;
+	height: auto;
+}
+.animal {
+	width: 300px;
+	font-size: 10px;
+	line-height: 10px;
+	border: 3px solid black;
+}
+
+.my-skills-header {
+	font: 40px 'Montserrat', sans-serif;
+	padding-left: 30px;
+	font-weight: 600;
+	margin: 0px;
+	padding-top: 20px;
+}
+.my-skills {
+	font: 20px 'Roboto', sans-serif;
+	line-height: 30px;
+	width: 700px;
+}
+/* projects */
+.my-projects-page {
+	background-color: #313131;
+	height: 100vh;
+}
+
+.my-projects-header {
+	color: white;
+	font: 40px 'Montserrat', sans-serif;
+	margin: 0px;
+	font-weight: 600;
+	padding-top: 20px;
+}
+
+.my-project {
+	width: 350px;
+	height: 170px;
+	background-color: white;
+	padding: 5px 5px;
+	margin: 10px;
+	/* text-align: center; */
+}
+
+.project-header {
+	text-align: center;
+	font: 20px 'Montserrat', sans-serif;
+	line-height: 30px;
+	margin: 10px;
+}
+
+.project-tags {
+	font: 15px 'Roboto', sans-serif;
+	font-style: italic;
+	font-weight: 300px;
+}
+.project-about {
+	text-align: right;
+}
+/* contacts */
+
+.contacts-header {
+	font: 40px 'Montserrat', sans-serif;
+	margin: 0px;
+	font-weight: 600;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+
+
+.contacts-list a{
+	/* text-decoration: none; */
+	color: black;
+	font: 25px 'Roboto', sans-serif;
+	line-height: 40px;
+}
+
+.page-footer {
+	background: rgba(0, 0, 0, 0.2);
+}
+.page-footer a{
+	color: black;
+	margin: 5px;
+}
