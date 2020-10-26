@@ -12,8 +12,6 @@ body {
 .bg-container {
 	height: 100vh;
 	background: linear-gradient(-45deg, #ee7752 0%, #e73c7e 30%, #23a6d5 70%, #2fccc2 100%);
-	/* background-size: 100% 100%; */
-	/* background-position:  center; */
 }
 /* header */
 .page-header {
@@ -51,43 +49,62 @@ body {
 
 /* about page */
 .about-page {
-	/* height: 100vh; */
+	height: 100vh;
+}
+.first-block {
+	display: flex;
+}
+.about-block {
+	width: 600px;
+	margin: 30px;
 }
 .about-header {
-	font: 40px 'Montserrat', sans-serif;
-	padding-left: 30px;
+	font: 45px 'Montserrat', sans-serif;
+	padding-left: 50px;
 	font-weight: 600;
 	margin: 0px;
-	padding-top: 20px;
+	padding-top: 30px;
+	
 }
-.about-content {
-	/* display: inline; */
+.about-text {
 	font: 20px 'Roboto', sans-serif;
-	width: 700px;
+	line-height: 25px;
 }
 
 .my_photo {
 	width: 300px;
 	height: auto;
+	margin: auto; 
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/* 20px 60px 20px 60px; */
+}
+.second-block {
+	display: flex;
+	/* padding-top: 30px; */
 }
 .animal {
-	width: 300px;
 	font-size: 10px;
 	line-height: 10px;
+	margin: 30px;
 	border: 3px solid black;
 }
-
+.my-skills-container {
+	margin-left: 30px;
+	margin-top: 30px;
+}
 .my-skills-header {
-	font: 40px 'Montserrat', sans-serif;
-	padding-left: 30px;
+	font: 45px 'Montserrat', sans-serif;
 	font-weight: 600;
-	margin: 0px;
-	padding-top: 20px;
+	/* margin: 0px; */
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .my-skills {
 	font: 20px 'Roboto', sans-serif;
 	line-height: 30px;
-	width: 700px;
+	width: 600px;
 }
 /* projects */
 .my-projects-page {
@@ -97,59 +114,90 @@ body {
 
 .my-projects-header {
 	color: white;
-	font: 40px 'Montserrat', sans-serif;
-	margin: 0px;
+	font: 45px 'Montserrat', sans-serif;
 	font-weight: 600;
-	padding-top: 20px;
+	padding: 30px;
+}
+
+.first-two-project, .second-two-project {
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .my-project {
+	display: inline-block;
+	position: relative;
 	width: 350px;
-	height: 170px;
+	height: 200px;
 	background-color: white;
-	padding: 5px 5px;
-	margin: 10px;
-	/* text-align: center; */
+	vertical-align: top;
+	margin: 10px 30px 10px 30px;
+	padding: 10px;
+	
 }
 
 .project-header {
 	text-align: center;
 	font: 20px 'Montserrat', sans-serif;
 	line-height: 30px;
-	margin: 10px;
+	margin: 20px;
+	padding-top: 10px;
 }
 
 .project-tags {
+	display: inline-block;
 	font: 15px 'Roboto', sans-serif;
 	font-style: italic;
-	font-weight: 300px;
+	margin: 0;
+	padding: 0px 0px 20px 20px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	vertical-align: top;
 }
 .project-about {
-	text-align: right;
+	display: inline-block;
+	margin: 0;
+	padding: 0 20px 20px 0;
+	position:absolute;
+	bottom:0;
+	right:0;
+	vertical-align: top;
 }
 /* contacts */
 
 .contacts-header {
-	font: 40px 'Montserrat', sans-serif;
+	font: 45px 'Montserrat', sans-serif;
 	margin: 0px;
 	font-weight: 600;
-	padding-left: 30px;
-	padding-top: 20px;
+	padding-left: 70px;
+	padding-top: 30px;
 }
-
-
-
-.contacts-list a{
+#bottom-bg {
+	position: relative;
+}
+.contacts-list a {
 	/* text-decoration: none; */
 	color: black;
 	font: 25px 'Roboto', sans-serif;
-	line-height: 40px;
+	line-height: 50px;
 }
 
 .page-footer {
 	background: rgba(0, 0, 0, 0.2);
+	text-align: right;
+	padding: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.footer-menu {
+	float: left;
 }
 .page-footer a{
+	padding-top: 10px;
+	padding-bottom: 10px;
 	color: black;
-	margin: 5px;
+	margin: 15px;
 }
