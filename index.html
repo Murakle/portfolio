@@ -11,6 +11,10 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7cc4028cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -95,26 +99,25 @@ __________1¶¶¶¶¶1________________1¶¶1_____________
                     <h3 class="project-header">OSGI приложение, для поиска самых популярнных слов на новостных ресурсах
                     </h3>
                     <p class="project-tags">Java, OSGI</p>
-                    <a href="#" class="project-about">Подробнее-></a>
+                    <a href="#" class="project-about popup-button-1">Подробнее-></a>
                 </div>
                 <div class="my-project" id="project-2">
                     <h3 class="project-header">Key-Value Storage Server, на Java</h3>
                     <p class="project-tags">Java, OOP</p>
-                    <a href="#" class="project-about">Подробнее-></a>
+                    <a href="#" class="project-about popup-button-2">Подробнее-></a>
                 </div>
             </div>
             <div class="second-two-project">
                 <div class="my-project" id="project-3">
                     <h3 class="project-header">Плагин для IntelliJ IDEA, которы меняет фон редактора с добовлением
-                        фильтров
-                    </h3>
+                        фильтров</h3>
                     <p class="project-tags">Java, Gradle</p>
-                    <a href="#" class="project-about">Подробнее-></a>
+                    <a href="#" class="project-about popup-button-3">Подробнее-></a>
                 </div>
                 <div class="my-project" id="project-4">
-                    <h3 class="project-header">2D игра на Unity3D жанра "Bullet Hell"</h3>
+                    <h3 class="project-header">2D игра на Unity3D в жанре "Bullet Hell"</h3>
                     <p class="project-tags">C#, Unity3D</p>
-                    <a href="#" class="project-about">Подробнее-></a>
+                    <a href="#" class="project-about popup-button-4">Подробнее-></a>
                 </div>
             </div>
         </div>
@@ -130,8 +133,14 @@ __________1¶¶¶¶¶1________________1¶¶1_____________
                     <li><a href="https://vk.com/murat161100">Vk</a></li>
                     <li><a href="https://github.com/Murakle">GitHub</a></li>
                 </ul>
-                <div class="form-for-offers">
-                    <!-- todo -->
+                <div class="dog-gallery">
+                    <img class="big-photo" src="img/dogPhotos/dog_1.png">
+                    <div class="small-photos">
+                        <button class="gallery-button"><img src="img/dogPhotos/dog_1.png" class="small-photo"></button>
+                        <button class="gallery-button"><img src="img/dogPhotos/dog_2.jpg" class="small-photo"></button>
+                        <button class="gallery-button"><img src="img/dogPhotos/dog_3.jpg" class="small-photo"></button>
+                        <button class="gallery-button"><img src="img/dogPhotos/dog_4.jpg" class="small-photo"></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -148,7 +157,158 @@ __________1¶¶¶¶¶1________________1¶¶1_____________
             </div>
         </footer>
     </div>
+
+    <div class="popup-block popup-block-1">
+        <div class="popup-content">
+
+            <h2 class="project-name">OSGI приложение, для поиска самых популярнных слов на новостных ресурсах</h2>
+            <div class="project-all-info">
+                <div class="project-information">
+                    <p class="project-description">
+                        Приложение, которое получает через API новостных порталов список актуальных новостей и выводит
+                        10
+                        самых часто встречающихся слов из заголовков новостей
+                        Задание реализовано как один проект с несколькими модулями, каждый из которых реализует
+                        отдельный
+                        бандл.
+                    </p>
+                    <a href="https://github.com/Murakle/SummerPracticePart5" class="github-link-icon"><i
+                            class="fab fa-github"></i></a>
+                    <i class="project-tags-popup">Java/OSGI/Module app</i>
+                </div>
+                <pre class="code-example"><code class="java hljs">public String getTitles() throws IOException {
+    // get json file
+    URL url = new URL(address);
+    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+    connection.setRequestProperty("Accept-Encoding", "gzip");
+
+    BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(connection.getInputStream())));
+    String inputLine;
+    StringBuilder result = new StringBuilder();
+    while ((inputLine = in.readLine()) != null) {
+        result.append(inputLine);
+    }
+    in.close();
+    //parse json file (get titles)
+    StringBuilder titles = new StringBuilder();
+    JSONObject obj = new JSONObject(result.toString());
+    JSONObject news = obj.getJSONObject("documents");
+    for (String o : news.keySet()) {
+        JSONObject n = news.getJSONObject(o);
+        titles.append(n.getString("title")).append(" ");
+
+    }
+    return titles.toString();
+}</code></pre>
+            </div>
+            <a href="#" class="button-close-popup button-close-popup-1"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+    <div class="popup-block popup-block-2">
+        <div class="popup-content">
+            <h2 class="project-name">Key-Value Storage Server</h2>
+            <div class="project-all-info">
+                <div class="project-information">
+                    <p class="project-description">
+                        Key - Value хранилище, реализованное как append-only журнал. Все существующие и готовые к
+                        использованию (операции чтения-записи) базы данных, таблицы и сегменты представлены в
+                        приложении
+                        в
+                        виде runtime структур - объектов соответствующих классов Database, Table, Segment
+                    </p>
+                    <a href="https://github.com/Murakle/task8-database-server" class="github-link-icon"><i
+                            class="fab fa-github"></i></a>
+                    <i class="project-tags-popup">Java/OOP/Database</i>
+                </div>
+                <pre class="code-example"><code class="java hljs">public DatabaseServer(ExecutionEnvironment env, Initializer initializer) throws DatabaseException {
+    this.env = env;
+    File dir = new File(env.getWorkingPath().toString());
+    if (dir.isDirectory()) {
+        InitializationContextImpl initializationContext = InitializationContextImpl.builder()
+                .executionEnvironment(env)
+                .build();
+        initializer.perform(initializationContext);
+    } else {
+        if (!dir.mkdir()) {
+            throw new DatabaseException("Can't create directory for ExecutionEnvironment:" + env.getWorkingPath());
+        }
+    }
+}</code></pre>
+            </div>
+            <a href="#" class="button-close-popup button-close-popup-2"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+    <div class="popup-block popup-block-3">
+        <div class="popup-content">
+
+            <h2 class="project-name">Плагин для IntelliJ IDEA, который меняет фон редактора с добовлением
+                фильтров</h2>
+            <div class="project-all-info">
+                <div class="project-information">
+                    <p class="project-description">
+                        Плагин для IntelliJ IDEA, с помощью которого можно загрузить картинку, наложить на нее
+                        фильтры(Черно-белый, размытие и т.д), а так-же задать прозрачность и установить её в
+                        качестве
+                        фона
+                        рабочей среды IDE
+                        <a href="https://github.com/Murakle/MyPlugin" class="github-link-icon"><i
+                                class="fab fa-github"></i></a>
+                        <i class="project-tags-popup">Java/Gradle/IntelliJ IDEA</i>
+                </div>
+                <pre class="code-example"><code class="cpp hljs">@Override
+@SuppressWarnings("UseJBColor")
+public FilterResult apply() {
+    BufferedImage result = copyImage(image);
+    for (int i = 0; i < result.getWidth(); i++) {
+        for (int j = 0; j < result.getHeight(); j++) {
+            Color prev = new Color(image.getRGB(i, j));
+            int dw = (prev.getRed() + prev.getGreen() + prev.getBlue()) / 3;
+            Color newColor = new Color(dw, dw, dw);
+            result.setRGB(i, j, newColor.getRGB());
+        }
+    }
+    return new FilterResult(result);
+}</code></pre>
+            </div>
+            <a href="#" class="button-close-popup button-close-popup-3"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+    <div class="popup-block popup-block-4">
+        <div class="popup-content">
+
+            <h2 class="project-name">2D игра на Unity3D в жанре "Bullet Hell"</h2>
+            <div class="project-all-info">
+                <div class="project-information">
+                    <p class="project-description">
+                        Игра на Unity3D в которой нужно уклонятся от вражеских снарядов в течение максимального
+                        времени.
+                        При
+                        каждом запуске карта генерируется случайно
+                    </p>
+                    <a href="https://github.com/Murakle/TaSamiyGame" class="github-link-icon"><i
+                            class="fab fa-github"></i></a>
+                    <i class="project-tags-popup">C#/Unity3D/RandomGeneration</i>
+                </div>
+                <pre class="code-example"><code class="cpp hljs">void Start()
+{
+    player = GameObject.FindWithTag("Player");
+    offset = transform.position - player.transform.position;
+}
+
+private void FixedUpdate()
+{
+    Vector3 target = new Vector3(player.transform.position.x - offset.x, player.transform.position.y + offset.y,
+        transform.position.z);
+    Vector3 currentPosition = Vector3.Lerp(transform.position, target, damping * Time.deltaTime);
+    transform.position = currentPosition;
+}</code></pre>
+            </div>
+            <a href="#" class="button-close-popup button-close-popup-4"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+    <script src="script/gallery.js"></script>
     <script src="script/main.js"></script>
+    <script src="script/popup.js"></script>
 </body>
 
 </html>

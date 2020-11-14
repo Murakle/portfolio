@@ -157,6 +157,7 @@ body {
 }
 .project-about {
 	display: inline-block;
+	color: black;
 	margin: 0;
 	padding: 0 20px 20px 0;
 	position:absolute;
@@ -176,8 +177,12 @@ body {
 #bottom-bg {
 	position: relative;
 }
+.contacts-list {
+	float: left;
+}
 .contacts-list a {
 	/* text-decoration: none; */
+	
 	color: black;
 	font: 25px 'Roboto', sans-serif;
 	line-height: 50px;
@@ -200,4 +205,142 @@ body {
 	padding-bottom: 10px;
 	color: black;
 	margin: 15px;
+}
+
+/* pop-up block */
+
+.popup-block {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+.popup-content {
+	position: relative;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;	
+	width: auto;
+	max-width: 80%;
+	min-width: 800px;
+
+	overflow: auto;
+	 
+}
+
+.popup-block-show {
+	display: block;
+}
+
+.stop-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
+.code-example {
+	max-width: 700px;
+	max-height: 600px;
+	width: 60%;
+	/* display: inline-block; */
+	float: right;
+}
+
+.project-information {
+	min-width: 300px;
+	max-width: 40%;
+	position: absolute;
+	float: left;
+	top: 0;
+	bottom: 0;
+	left: 10px;
+}
+
+.button-close-popup {
+	display: inline-block;
+	position: absolute;
+	color: black;
+	top: 0;
+	right: 0;
+}
+.project-tags-popup{
+	display: inline-block;
+	font: 15px 'Roboto', sans-serif;
+	font-style: italic;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+
+.project-description {
+	padding-left: 20px;
+	padding-right: 20px;
+	font: 20px 'Roboto', sans-serif;
+}
+.project-name {
+	max-width: 600px;
+	font: 30px 'Montserrat', sans-serif;
+	line-height: 30px;
+	font-weight: 600;
+	margin-left: 20px;
+}
+.fa-times {
+	padding: 10px;
+	font-size: 30px;
+}
+
+.fa-github {
+	
+	font-size: 30px;
+	color: black;
+}
+.github-link-icon {
+	display: inline-block;
+	bottom: 10px;
+	left: 20px;
+	position: absolute;
+}
+.project-all-info {
+	position: relative;
+	overflow: hidden;
+}
+
+/* gallery */
+
+.dog-gallery {
+	margin-right: 100px;
+	float: right;
+}
+.big-photo {
+	width: 500px;
+	height: 500px;
+}
+.gallery-button {
+	border: 0px;
+	padding: 0;
+	margin: 10px;
+}
+.small-photo {
+	width: 110px;
+	height: 110px;
+}
+.small-photo:hover {
+	outline: 2px solid rgba(106, 33, 223, 0.5);
+	transform:scale(1.2);
+}
+.small-photos {
+	font-size: 0px;
+}
+.small-photos > button:first-child{
+	margin-left: 0px;
+}
+
+.small-photos > button:last-child{
+	margin-right: 0px;
 }
