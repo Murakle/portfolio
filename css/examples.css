@@ -1,0 +1,146 @@
+.chat-section {
+    height: 100vh;
+}
+.chat-about {
+    float: left;
+    width: 50%;
+}
+.example-header {
+    color: black;
+	font: 45px 'Montserrat', sans-serif;
+	font-weight: 600;
+	padding: 30px;
+}
+.chat {
+    border-radius: 20px;
+    float: right;
+    margin-top: 100px;
+    width: 450px;
+    height: 700px;
+    padding: 20px;
+    background-color: cadetblue;
+    position: relative;
+}
+
+.chat-form {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.chat-messages {
+    max-height: 630px;
+    overflow: auto;
+}
+.chat-message-container {
+    width: 100%;
+    float: left;
+}
+.chat-message {
+    
+    min-width: 100px;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+.chat-message-your {
+    background-color: coral;
+    float: left;
+    text-align: left;
+    border-radius: 20px 20px 20px 0;
+}
+.chat-message-another {
+    background-color: rgb(241, 100, 48);
+    float: right;
+    text-align: right;
+    border-radius: 20px 20px 0;
+}
+.chat-message-author {
+    margin: 0;
+}
+.chat-message-text {
+    margin: 0;
+    width: 100%;
+    word-wrap: break-word;
+    padding-top: 5px;
+    text-align: left;
+}
+.chat-form-text {
+    border: 0;
+    border-radius: 40px 0 0 40px;
+    width: 370px;
+    padding: 0px;
+    padding-left: 20px;
+    height: 45px;
+}
+.chat-form-submit {
+    border: 0px;
+    border-radius: 0 40px 40px 0;
+    height: 45px;
+    padding: 0px;
+    width: 60px;
+    background-color: darkgrey;
+}
+.todo-section {
+    height: 100vh;
+    background-color: #313131;
+}
+
+.todo-header {
+    color: #E0E0E0;
+}
+
+.todo-about-text {
+    color: #E0E0E0;
+}
+
+.todo {
+    margin: 10px;
+    margin-top: 50px;
+    width: auto;
+    padding: 30px;
+    
+    background-color: #F2F2F2;
+    height: 550px;
+    border-radius: 30px;
+}
+
+.todo-column {
+    min-width: 150px;
+    max-width: 200px;
+    min-height: 300px;
+    max-height: 100%;
+    padding: 20px;
+    display: inline-block;
+    margin: 15px;
+    border-radius: 20px;
+    background-color: #A69595;
+}
+
+.todo-column-header {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.todo-task {
+    background-color: #F2DADA;
+    min-height: 40px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.todo-task-moving {
+    position: absolute;
+    z-index: 1000;
+
+}
+.todo-task-transperent {
+    background-color: rgba(242, 218, 218, 0.5);
+    color: rgba(100, 100, 100, 0.5);
+}
+.todo-task-header {
+    padding: 0px;
+    margin: 0;
+}
