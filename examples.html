@@ -82,48 +82,36 @@
                     назначать время и коментарий
             </div>
             <div class="todo">
-                <div class="todo-column">
-                    <h2 class="todo-column-header">
-                        ToDo
-                    </h2>
-                    <div class="todo-tasks-container">
-                        <div class="todo-task">
-                            <h3 class="todo-task-header">Todo todo</h3>
+
+                <template class="todo-column-template">
+                    <div class="todo-column">
+                        <h2 class="todo-column-header">
+                            ToDo
+                        </h2>
+                        <div class="todo-tasks-container">
+                            <template class="todo-task-template">
+                                <div class="todo-task">
+                                    <h3 class="todo-task-header">Todo todo</h3>
+                                </div>
+                            </template>
+                            <form method="POST" class="todo-task-form">
+                                <input type='text' class='todo-task-form-text' placeholder='Enter the task'><input
+                                    type='submit' class='todo-task-form-submit' value='Add'>
+                            </form>
                         </div>
-                        <form method="POST" class="todo-task-form">
-                            <input type='text' class='todo-task-form-text' placeholder='Enter the task'><input
-                                type='submit' class='todo-task-form-submit' value='Add'>
-                        </form>
                     </div>
-                </div>
-                <div class="todo-column">
+                </template>
+                <div class="todo-column todo-add-column">
                     <h2 class="todo-column-header">
-                        Doing
+                        Add
                     </h2>
-                    <div class="todo-tasks-container">
-                        <div class="todo-task">
-                            <h3 class="todo-task-header">Todo todo</h3>
-                        </div>
-                        <form method="POST" class="todo-task-form">
-                            <input type='text' class='todo-task-form-text' placeholder='Enter the task'><input
-                                type='submit' class='todo-task-form-submit' value='Add'>
-                        </form>
-                    </div>
+
+                    <form method="POST" class="todo-column-form">
+                        <input type='submit' class='todo-task-form-submit' value='Add'>
+                    </form>
+
                 </div>
-                <div class="todo-column">
-                    <h2 class="todo-column-header">
-                        Done
-                    </h2>
-                    <div class="todo-tasks-container">
-                        <div class="todo-task">
-                            <h3 class="todo-task-header">Todo todo</h3>
-                        </div>
-                        <form method="POST" class="todo-task-form">
-                            <input type='text' class='todo-task-form-text' placeholder='Enter the task'><input
-                                type='submit' class='todo-task-form-submit' value='Add'>
-                        </form>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
