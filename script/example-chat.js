@@ -56,6 +56,10 @@ function addNewMessage(text, author, className) {
     clone.querySelector(".chat-message-author").textContent = author;
     clone.querySelector(".chat-message-text").textContent = text;
     clone.querySelector(".chat-message").classList.add(className);
+    clone.querySelector(".remove-message").addEventListener('click', function (evt) {
+        evt.preventDefault();
+        clone.remove();
+    });
     messages.appendChild(clone);
 }
 function parse(str) {

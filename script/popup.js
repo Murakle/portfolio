@@ -15,9 +15,9 @@ var addPopupClickListener = function (index) {
     });
 }
 for (var i = 1; i <= n; i++) {
-    var openButtonclassName = '.popup-button-' + i
-    var popupBlockClassName = '.popup-block-' + i
-    var closeBlockClassName = '.button-close-popup-' + i
+    var openButtonclassName = '.popup-button-' + i;
+    var popupBlockClassName = '.popup-block-' + i;
+    var closeBlockClassName = '.button-close-popup-' + i;
     openPopupButtons[i - 1] = document.querySelector(openButtonclassName);
     popupBlocks[i - 1] = document.querySelector(popupBlockClassName)
     closePopupButtons[i - 1] = popupBlocks[i - 1].querySelector(closeBlockClassName);

@@ -5,7 +5,7 @@
     <title>Dautov Murat M33011</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&family=Roboto+Mono:ital,wght@0,400;0,600;1,300&display=swap"
         rel="stylesheet">
@@ -41,9 +41,10 @@
                     <h2 class="about-header">Обо мне</h2>
                     <p class="about-text">Учусь на третьем курсе в Университете ИТМО факультет информационных технологий
                         и программирования. Специализация - информационные системы и технологии.<br>
-                        С 2015 года программирую на Java, c 2017 также на C++.
-                        Опыт в разработке игр на C#(Unity3D) 2 года.
+                        С 2015 года программирую на Java.
+                        Опыт в разработке игр на C#(Unity3D) 2 года (хобби).
                         Также с 2019 погрузился в web разработку(HTML, CSS, JS).
+                        Вот тут еще про Spring написать не забудь
                     </p>
                 </div>
                 <img src="./img/my_photo.png" , alt="Я" class="my_photo">
@@ -55,7 +56,7 @@
                         <li>Знание и понимание алгоритмов и структур данных.</li>
                         <li>Знание и понимание шаблонов проектирования.</li>
                         <li>Знание основ Unity3D и умение создавать игровую логику в Unity3D</li>
-                        <li>Java Core, C++</li>
+                        <li>Java Core, Spring Framework</li>
                         <li>HTML, CSS, JS (сайт делал сам)</li>
                         <li>Уверенное владение Git, Linux</li>
                         <li>Английский язык(B2)</li>
@@ -65,9 +66,104 @@
         </div>
     </section>
     <section class="my-projects-page" id="projects">
-        <div class="container">
-            <h2 class="my-projects-header">Мои проекты</h2>
-            <div class="first-two-project">
+      <div class="container">
+        <h2 class="my-projects-header">Мои проекты</h2>
+        <ul class="folders-container">
+          <li class="folder">
+            <h2 class="folder-closed hidden">Java</h2>
+            <div class="folder-opened">
+              <h2 class="folder-title">Java</h2>
+              <ul class="folder-projects">
+                <li class="project">
+                  <h3 class="project-header">OSGI приложение, для поиска самых популярнных слов на новостных ресурсах
+                  </h3>
+                  <p class="project-tags">Java, OSGI</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Key-Value Storage Server, на Java
+                  </h3>
+                  <p class="project-tags">Java, OOP</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Плагин для IntelliJ IDEA, которы меняет фон редактора с добовлением
+                    фильтров
+                  </h3>
+                  <p class="project-tags">Java, Gradle</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Платформа для проведения хакатонов(not done)</h3>
+                  <p class="project-tags">Java, Spring, Web</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="folder closed-folder">
+            <h2 class="folder-closed">Web dev</h2>
+            <div class="folder-opened hidden">
+              <h2 class="folder-title">Web dev</h2>
+              <ul class="folder-projects">
+                <li class="project">
+                  <h3 class="project-header">Сайт портфолио
+                  </h3>
+                  <p class="project-tags">HTML, CSS, JS</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Сайт онлайн магазина</h3>
+                  <p class="project-tags">HTML, CSS, JS</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Примеры работ (Чат, Trello)</h3>
+                  <p class="project-tags">HTML, CSS, JS</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Платформа для проведения хакатонов(not done)</h3>
+                  <p class="project-tags">Java, Spring, Web</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="folder closed-folder ">
+            <h2 class="folder-closed">C#, Unity3D</h2>
+            <div class="folder-opened hidden empty-folder">
+              <h2 class="folder-title">C#, Unity3D</h2>
+              <ul class="folder-projects">
+                <li class="project">
+                  <h3 class="project-header">2D игра в жанре "Bullet Hell"</h3>
+                  <p class="project-tags">C#, Unity3D</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+                <li class="project">
+                  <h3 class="project-header">Heroes of Might and Magic 3 clone</h3>
+                  <p class="project-tags">C#, Unity3D</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="folder closed-folder ">
+            <h2 class="folder-closed">Python, ML</h2>
+            <div class="folder-opened hidden empty-folder">
+              <h2 class="folder-title">Python, ML</h2>
+              <ul class="folder-projects">
+                <li class="project">
+                  <h3 class="project-header">Лабы с универа (CNN, DT, Кластеризация)</h3>
+                  <p class="project-tags">Python, ML, <br/>BigData, DataScince ух)</p>
+                  <a href="#" class="project-about popup-button-1">Подробнее-></a>
+                </li>
+              </ul>
+              </ul>
+            </div>
+          </li>
+        </ul>
+            <!-- <div class="first-two-project">
                 <div class="my-project" id="project-1">
                     <h3 class="project-header">OSGI приложение, для поиска самых популярнных слов на новостных ресурсах
                     </h3>
@@ -92,8 +188,8 @@
                     <p class="project-tags">C#, Unity3D</p>
                     <a href="#" class="project-about popup-button-4">Подробнее-></a>
                 </div>
-            </div>
-        </div>
+            </div> -->
+      </div>
     </section>
     <div class="bg-container" id="bottom-bg">
         <section class="contacts" id="contacts">
@@ -222,12 +318,11 @@
                     <p class="project-description">
                         Плагин для IntelliJ IDEA, с помощью которого можно загрузить картинку, наложить на нее
                         фильтры(Черно-белый, размытие и т.д), а так-же задать прозрачность и установить её в
-                        качестве
-                        фона
-                        рабочей среды IDE
-                        <a href="https://github.com/Murakle/MyPlugin" class="github-link-icon"><i
-                                class="fab fa-github"></i></a>
-                        <i class="project-tags-popup">Java/Gradle/IntelliJ IDEA</i>
+                        качестве фона рабочей среды IDE
+                    </p>
+                    <a href="https://github.com/Murakle/MyPlugin" class="github-link-icon"><i
+                            class="fab fa-github"></i></a>
+                    <i class="project-tags-popup">Java/Gradle/IntelliJ IDEA</i>
                 </div>
                 <pre class="code-example"><code class="cpp hljs">@Override
 @SuppressWarnings("UseJBColor")
@@ -281,8 +376,9 @@ private void FixedUpdate()
         </div>
     </div>
     <script src="script/gallery.js"></script>
-    <script src="script/main.js"></script>
-    <script src="script/popup.js"></script>
+    <!-- <script src="script/main.js"></script> -->
+    <!-- <script src="script/popup.js"></script> -->
+    <script src="script/projects.js"></script>
 </body>
 
 </html>

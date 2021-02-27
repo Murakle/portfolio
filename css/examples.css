@@ -34,10 +34,13 @@
 }
 .chat-message-container {
     width: 100%;
+    /* padding: 1px; */
+    /* position: absolute; */
     float: left;
 }
 .chat-message {
-    
+    position: relative;
+
     min-width: 100px;
     max-width: 300px;
     padding: 10px;
@@ -151,4 +154,21 @@
 .todo-task-header {
     padding: 0px;
     margin: 0;
+}
+
+
+.remove-message {
+    position: absolute;
+    top:0;
+}
+.chat-message-your > .remove-message {
+    right: 5px;
+}
+.chat-message-another > .remove-message {
+    left: 5px;
+}
+.fa-times {
+    font-size: 15px;
+    color: black;
+    
 }
